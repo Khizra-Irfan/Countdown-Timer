@@ -8,108 +8,99 @@ console.log(chalk.greenBright("\n                                              C
 console.log(chalk.bgCyanBright("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"));
 
 const bigNumbers = [
-    `
-  ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
- ▒▒▒▒    ▒▒▒▒
- ▒▒▒▒    ▒▒▒▒
- ▒▒▒▒    ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
-  ░░░░░░░░
+    ` 
+  ___  
+ / _ \\ 
+| | | |
+| | | |
+| |_| |
+ \\___/ 
 `,
-    `
-    ░░
-   ▒▒▒▒
- ▒▒  ▒▒
-     ▒▒
-     ▒▒
-     ▒▒
- ▒▒▒▒▒▒▒▒
+    ` 
+ __  
+/_ | 
+ | | 
+ | | 
+ | | 
+ |_| 
 `,
-    `
-  ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
-        ▒▒▒▒
-  ░░░░▒▒▒▒
- ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
+    ` 
+ ___  
+|__ \\ 
+   ) |
+  / / 
+ / /_ 
+|____|
 `,
-    `
- ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
-        ▒▒▒▒
-   ░░░░▒▒▒▒
-        ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
-  ░░░░░░░░
+    ` 
+ ____  
+|___ \\ 
+  __) |
+ |__ < 
+ ___) |
+|____/ 
 `,
-    `
- ░░░░  ▒▒
- ▒▒▒▒  ▒▒
- ▒▒▒▒  ▒▒
- ▒▒▒▒▒▒▒▒▒▒
-      ▒▒
-      ▒▒
-      ▒▒
+    ` 
+ _  _   
+| || |  
+| || |_ 
+|__   _|
+   | |
+   |_|  
 `,
-    `
- ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
- ▒▒▒▒
- ▒▒▒▒▒▒▒▒░░
-        ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
-  ░░░░░░░░
+    `  
+  __ __
+ | _ _|
+ | | 
+ |__ \\ 
+ ___) |
+|____/ 
 `,
-    `
-  ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
- ▒▒▒▒
- ▒▒▒▒▒▒▒▒░░
- ▒▒▒▒  ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
-  ░░░░░░░░
+    ` 
+  __  
+ / /  
+/ /_ 
+| '_ \\
+| (_) |
+ \\___/ 
 `,
-    `
- ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
-       ▒▒▒▒
-      ▒▒▒▒
-      ▒▒▒▒
-     ▒▒▒▒
-     ▒▒▒▒
+    ` 
+ _____ 
+|____ |
+    / /
+   / / 
+  / /  
+ /_/   
 `,
-    `
-  ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
- ▒▒▒▒  ▒▒▒▒
-  ░░░░▒▒░░
- ▒▒▒▒  ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
-  ░░░░░░░░
+    ` 
+  ___  
+ / _ \\ 
+| (_) |
+ > _ < 
+| (_) |
+ \\___/ 
 `,
-    `
-  ░░░░░░░░
- ▒▒▒▒▒▒▒▒▒▒
- ▒▒▒▒  ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
-        ▒▒▒▒
- ▒▒▒▒▒▒▒▒▒▒
-  ░░░░░░░░
+    ` 
+  ___  
+ / _ \\ 
+| (_) |
+ \\__, |
+   / / 
+  /_/  
 `
 ];
 
 const colon = `
-   
-╔═╗
-╚═╝
-╔═╗
-╚═╝
+ 
+ 
+ _  
+(_)
+ _  
+(_)
 `;
 
 const timesUp = `
-   
+
  ░░░░░░░░ ░░ ░░░    ░░░ ░░░░░░░     ░░    ░░ ░░░░░░  
     ▒▒    ▒▒ ▒▒▒▒  ▒▒▒▒ ▒▒          ▒▒    ▒▒ ▒▒   ▒▒ 
     ▒▒    ▒▒ ▒▒ ▒▒▒▒ ▒▒ ▒▒▒▒▒       ▒▒    ▒▒ ▒▒▒▒▒▒  
@@ -172,31 +163,36 @@ function getTimeInput() {
 
 function printBigNumber(hours: number, minutes: number, seconds: number) {
     const timeString = `${hours.toString().padStart(2, '0')}${minutes.toString().padStart(2, '0')}${seconds.toString().padStart(2, '0')}`;
-    console.log(chalk.magentaBright(`Current Time: ${hours}:${minutes}:${seconds}`));
-    console.log(chalk.magentaBright(`Parsed Time String: ${timeString}`));
 
     const [hour1, hour2, minute1, minute2, second1, second2] = timeString.split('');
 
-    console.log(chalk.magentaBright(`Parsed Digits: ${hour1}, ${hour2}, ${minute1}, ${minute2}, ${second1}, ${second2}`));
+    const getDigitLines = (digit: any): any => {
+        const num = parseInt(digit);
+        if (num >= 0 && num <= 9) {
+            return bigNumbers[num].split('\n');
+        } else {
+            return [];
+        }
+    };
 
-    const hour1Digits = bigNumbers[parseInt(hour1)].split('\n');
-    const hour2Digits = bigNumbers[parseInt(hour2)].split('\n');
-    const minute1Digits = bigNumbers[parseInt(minute1)].split('\n');
-    const minute2Digits = bigNumbers[parseInt(minute2)].split('\n');
-    const second1Digits = bigNumbers[parseInt(second1)].split('\n');
-    const second2Digits = bigNumbers[parseInt(second2)].split('\n');
+    const hour1Digits = getDigitLines(hour1);
+    const hour2Digits = getDigitLines(hour2);
+    const minute1Digits = getDigitLines(minute1);
+    const minute2Digits = getDigitLines(minute2);
+    const second1Digits = getDigitLines(second1);
+    const second2Digits = getDigitLines(second2);
     const colonDigits = colon.split('\n');
 
-    for (let i = 0; i < hour1Digits.length; i++) {
+    for (let i = 0; i < 7; i++) { // Assuming each digit has 7 lines
         console.log(
-            chalk.blueBright(hour1Digits[i].padEnd(12)) +
-            chalk.blueBright(hour2Digits[i].padEnd(12)) +
+            chalk.blueBright(hour1Digits[i]?.padEnd(12) || ''.padEnd(12)) +
+            chalk.blueBright(hour2Digits[i]?.padEnd(12) || ''.padEnd(12)) +
             chalk.whiteBright(colonDigits[i]?.padEnd(6) || ''.padEnd(6)) +
-            chalk.yellowBright(minute1Digits[i].padEnd(12)) +
-            chalk.yellowBright(minute2Digits[i].padEnd(12)) +
+            chalk.yellowBright(minute1Digits[i]?.padEnd(12) || ''.padEnd(12)) +
+            chalk.yellowBright(minute2Digits[i]?.padEnd(12) || ''.padEnd(12)) +
             chalk.whiteBright(colonDigits[i]?.padEnd(6) || ''.padEnd(6)) +
-            chalk.redBright(second1Digits[i].padEnd(12)) +
-            chalk.redBright(second2Digits[i])
+            chalk.redBright(second1Digits[i]?.padEnd(12) || ''.padEnd(12)) +
+            chalk.redBright(second2Digits[i] || '')
         );
     }
 }

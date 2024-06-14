@@ -19,6 +19,7 @@
     "@types/node": "^20.12.12"
   },
   "dependencies": {
+    "@khizra_irfan/coundown-timer": "^1.0.0",
     "chalk": "^5.3.0",
     "inquirer": "^9.2.22"
   }
