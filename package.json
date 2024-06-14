@@ -1,6 +1,6 @@
 {
   "name": "@khizra_irfan/coundown-timer",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A countdown timer that visually displays the remaining time in large digits, updating every second until it reaches zero.",
   "main": "main.js",
   "type": "module",
